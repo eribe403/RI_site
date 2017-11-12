@@ -1,0 +1,26 @@
+{% extends 'info/header.html' %}
+{% block content %}
+{% load staticfiles %}
+
+<div class=row>
+	<div class=col-sm-12 style="padding-top:80px;padding-bottom:60px;">
+		<img src="{% static 'info/img/hdlogo.png' %}" class="img-responsive" alt='Ribera Logo' style= 'max-height:180px;width:auto;margin:auto;'>
+	</div>
+</div>
+
+
+<hr class="featurette-divider">
+<h1 style="padding-top:30px;text-align:center;">Welcome</h1>
+<br>
+<div class='row'>
+	<div class=col-sm-2>
+	</div>
+	<div class=col-sm-8>
+       		 <p style='font-size:22px;text-align:center;'>Our mission is to partner with clients to help them reach their financial goals with the confidence that their advisor is working for and with them.  We value the relationship with our clients over profits, and always strive for the highest level of integrity. <p>
+	</div>
+</div>
+<br><br>
+
+<hr class="featurette-divider">
+<br><br><br><br>
+{% endblock %}

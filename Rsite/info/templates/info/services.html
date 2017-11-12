@@ -1,0 +1,86 @@
+{% extends 'info/header.html' %}
+{% block content %}
+{% load staticfiles %}
+<h1 style="text-align: center;padding-top: 20px;" >Services</h1>
+<div id='services' class="container-fluid">
+  
+  <hr class='featurette-divider'>
+  <br>
+  <div class="row">
+    <div class=col-md-4>
+      <div class="card-1">
+      
+        <img src="{% static 'info/img/transfer1.png' %}" alt="transfer" style="width:40%;margin:auto;padding-top:15px;">
+        <h2>Rollover</h2>
+        <p style="padding:0px 15px 15px 15px;">Provide assistance and oversee the consolidation and transfer of IRA, 401(k), 403(b), 457 plans.  Many clients have long-forgotten accounts at other custodians and prior employers.  We will help locate and transfer these assets to one location for better investment management and control.</p>
+      </div>
+    </div>
+    <div class=col-md-4>
+      <div class="card-1">
+
+        <img src="{% static 'info/img/tax.png' %}" alt="tax" style="width:40%;margin:auto;padding-top:15px;">
+        <h2>Tax</h2>
+        <p style="padding:0px 15px 15px 15px;">Ensure that current tax information; Gain/Loss reports, 1099’s, are received by clients.  We will retain copies of past tax documents for easy reference, and provide cost-basis information when available.</p>
+      </div>
+    </div>
+    <div class=col-md-4>
+      <div class="card-1">
+
+        <img src="{% static 'info/img/retirement.png' %}" alt="retirement" style="width:40%;margin:auto;padding-top:15px;">
+        <h2>Retirement</h2>
+        <p style="padding:0px 15px 15px 15px;">Make projections of expected retirement income based on current investment portfolio and planned savings.  We will provide for regular payments during retirement and ensure that annual Required Minimum Distributions are made for accounts under our management.</p>
+      </div>
+    </div>
+  </div>
+  <br class='sbreak'>
+  <div class="row">
+    <div class=col-md-4>
+      <div class="card-1">
+        <img src="{% static 'info/img/investment.png' %}" alt="Investment" style="width:55%;margin:auto;padding-top:15px;">
+        <h2>Investment</h2>
+        <p style="padding:0px 15px 15px 15px;">Carefully plan, research, select and monitor investments.  We will work with clients to establish a portfolio of suitable investments given their individual needs, objectives, risk-tolerance, and experience.</p>
+      </div>
+    </div>
+    <div class=col-md-4>
+      <div class="card-1">
+        <img src="{% static 'info/img/allocation.png' %}" alt="allocation" style="width:40%;margin:auto;padding-top:15px;">
+        <h2>Allocation</h2>
+        <p style="padding:0px 15px 15px 15px;">Provide access to many market sectors by using diversified mutual funds.  We periodically review exposure to areas of concern and adjust according to market conditions or changes in a client’s personal financial situation.</p>
+      </div>
+    </div>
+    <div class=col-md-4>
+      <div class="card-1">
+        <img src="{% static 'info/img/risk.png' %}" alt="risk" style="width:45%;margin:auto;padding-top:15px;">
+        <h2>Risk</h2>
+        <p style="padding:0px 15px 15px 15px;">Manage investment risk, with the objective of achieving good returns while minimizing risk to the extent appropriate for each client.  We use Riskalyze, along with information gained from client communication to establish a portfolio suitable to each client’s comfort level with market risk.</p>
+      </div>
+    </div>
+  </div>
+  <br class="sbreak">
+  <div class="row">
+    <div class=col-md-4>
+      <div class="card-1">
+        <img src="{% static 'info/img/communication.png' %}" alt="communication" style="width:40%;margin:auto;padding-top:15px;">
+        <h2>Communication</h2>
+        <p style="padding:0px 15px 15px 15px;">Stay in contact with clients regarding market information and investment results.  We are available to meet periodically to discuss any changes in investment goals, or risk tolerance, or to discuss investment philosophy.</p>
+      </div>
+    </div>
+    <div class=col-md-8>
+      <hr class="featurette-divider">
+      <h2>Our Business Model</h2>
+      <br>
+      <div id='operations' style="text-align:left;padding-left:60px;">
+        <p>Our business is built on trust and integrity. You can count on a trusted partner to help you save, invest, and plan for retirement.</p>
+        <p>Our fees for managing money for our clients is based upon the assets under management. Accounts are billed annually when managed by Ribera Investments. Larger account values may be subject to a lower percentage annual billing.</p>
+        <p>Our minimum account size for new clients is $500,000.</p>
+      </div>
+      <br>
+      <p>Feel free to contact us for more information.</p>
+      <p>We look forward to meeting with you!</p>
+      <hr class='featurette-divider'>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}
