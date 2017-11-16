@@ -215,7 +215,7 @@ p.about-paragraph {
   transition: 0.3s;
   width: 70%;
   margin:auto;
-  min-height: 500px;
+  min-height: 450px;
   text-align: center;
 
 }
@@ -236,6 +236,48 @@ p.about-paragraph {
   padding-top: 17pt;
 }
 
+
+/* RESOURCES */
+#resource-buttons {
+	margin: auto;
+	width: 80%;
+}
+
+
+#resources-toc {
+	text-align: center;
+}
+
+#r-history-block {
+	text-align: center;
+}
+
+#r-history-text {
+	text-align: left;
+	/*margin: auto;*/
+	max-width: 1100px;
+	font-size: 14pt;
+}
+
+#r-investment-block {
+	text-align: left;
+	font-size: 14pt;
+}
+
+#r-investment-header {
+	text-align: center;
+
+}
+#r-company-header {
+	text-align: center;
+}
+#r-company-block {
+	font-size: 14pt;
+}
+
+#resource-cs-block {
+	text-align: center;
+}
 
 /*@media(max-width: 1700px){
   .card-1{
