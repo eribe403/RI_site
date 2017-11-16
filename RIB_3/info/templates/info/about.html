@@ -1,0 +1,38 @@
+{% extends 'info/header.html' %}
+{% block content %}
+{% load staticfiles %}
+<br><br>
+<img id='about-banner' src='{% static "info/img/btb.png" %}' class='img-responsive'>
+<div class='row'>
+	<div class=col-sm-3>
+	</div>
+	<div class=col-sm-6>
+		<br><br>
+		<hr class='featurette-divider'>
+		<h1 class='about-header'>Business Philosophy</h1>
+		<p class = 'about-paragraph'>The philosophy of Ribera Investment Management is to provide our clients with useful information for all of life's financial activities for a reasonable fee.  Our financial strategies aim at allowing you to accumulate high returns while protecting your hard-earned savings from inflation and taxes within the risk framework that you select.  We will introduce you to concepts and practices that will make your financial future more secure. </p>
+		<br><br>
+		<hr class='featurette-divider'>
+	</div>
+</div>
+
+
+<div class='row'>
+	<div class=col-sm-3>
+		<div class='card'>
+	    <img id='about-ty-pic' src="{% static 'info/img/Tylerclose.jpg' %}" alt="ty">
+			<h3 id='ty-card'>Tyler</h3>
+	    <p id='ty-card-text'>President & Cofounder of RIBERA Investments</p>
+
+  	</div>
+	</div>
+
+	<div class=col-sm-6>
+		<h1 class='about-header'>Tyler Ribera</h1>
+		<p class='about-paragraph'>Tyler Graduated with a degree in economics from UC Berkeley and holds a Masters degree in Monetary Economics from CSU East Bay.
+    Tyler co-founded RIBERA Investment Management LLC alongside his father, Gilbert Ribera, in 1994.  Prior to this position, Tyler worked at Charles Schwab in the Advisor Services Department, now Schwab Institutional.<p>
+	  <br><br>
+		<hr class='featurette-divider'>
+  </div>
+</div>
+{% endblock %}
