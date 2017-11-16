@@ -240,7 +240,7 @@ p.about-paragraph {
 /* RESOURCES */
 #resource-buttons {
 	margin: auto;
-	width: 80%;
+	width: 60%;
 }
 
 
@@ -279,6 +279,9 @@ p.about-paragraph {
 	text-align: center;
 }
 
+#rc-cs-pic {
+	margin: auto;
+}
 /*@media(max-width: 1700px){
   .card-1{
     width: 90%  !important;
