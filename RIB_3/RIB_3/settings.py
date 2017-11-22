@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'contact',
     'info',
+    'captcha',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -115,8 +116,13 @@ USE_L10N = True
 
 USE_TZ = True
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+RECAPTCHA_PUBLIC_KEY = '6Lfn1zkUAAAAAFLK0v_HGY9DwO76lt0C9-rd6dpm'
+RECAPTCHA_SECRET_KEY = '6Lfn1zkUAAAAANLyXPpxul0o9D5J1zhxvZQLUWHc'

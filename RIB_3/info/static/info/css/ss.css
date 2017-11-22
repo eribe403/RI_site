@@ -8,9 +8,41 @@ body {
 
 
 /* SCREEN BREAKS */
+
+@media(max-width: 1700px) {
+  .card-1 {
+    width: 80% !important;
+  }
+}
+
 @media (max-width: 992px) {
   .services-break{
     display:none;
+  }
+}
+@media (max-width: 768px) {
+  #toggle-mobile {
+    display:block !important;
+  }
+  #logo-footer {
+    display: none !important;
+  }
+  #icon-footer {
+    padding-top: 0px !important;
+  }
+  #header-btt-big {
+    display: none !important;
+  }
+  #about-top-hr {
+    display: none !important;
+  }
+  #about-small-hr {
+    display: block !important;
+  }
+}
+@media (max-width: 568px) {
+  .card-1{
+    width: 100% !important;
   }
 }
 
@@ -56,9 +88,10 @@ body {
   margin:auto;
 }
 
-address {
-  line-height:105%;
-  padding-top:18px;
+#address {
+  font-size: 12pt;
+  line-height:110%;
+  padding-top:15px;
   text-align:center;
 }
 
@@ -73,7 +106,7 @@ address {
 #glyph-email, #glyph-phone {
   font-size: 40pt;
   color:#28466f;
-  padding-right:50px;
+  padding-right:40px;
 }
 
 #glyph-linkedin {
@@ -91,7 +124,9 @@ a:hover > #glyph-phone {
   color: #000;
 }
 
-
+#myNavbar {
+  overflow:hidden !important;
+}
 /* HOME */
 
 #home-logo-div {
@@ -127,6 +162,7 @@ hr.featurette-divider {
 /* ABOUT*/
 #about-banner {
   border-radius:20px;
+  min-height: 110px;
   opacity:.82;
 }
 
@@ -169,8 +205,13 @@ p.about-paragraph {
   padding:0px 5px 10px 5px;
 }
 
+#home-bottom {
+  padding-bottom: 130px;
+}
 
-
+#about-small-hr {
+  display:none;
+}
 
 
 /* SERVICES */
@@ -238,23 +279,38 @@ p.about-paragraph {
 
 
 /* RESOURCES */
-#resource-buttons {
-	margin: auto;
-	width: 60%;
+
+h4.well-text {
+  text-align: left;
 }
 
+div.resource-buttons {
+	margin: auto;
+  max-width: 500px;
+
+}
+button  {
+  color: #28466f  !important;
+  font-size: 15pt !important;
+}
+
+.resource-buttons > a:hover {
+  text-decoration: none !important;
+}
 
 #resources-toc {
 	text-align: center;
 }
 
+#r-history-header {
+  color: #28466f;
+}
 #r-history-block {
 	text-align: center;
 }
 
 #r-history-text {
 	text-align: left;
-	/*margin: auto;*/
 	max-width: 1100px;
 	font-size: 14pt;
 }
@@ -265,10 +321,12 @@ p.about-paragraph {
 }
 
 #r-investment-header {
+  color: #28466f;
 	text-align: center;
 
 }
 #r-company-header {
+  color: #28466f;
 	text-align: center;
 }
 #r-company-block {
@@ -281,7 +339,64 @@ p.about-paragraph {
 
 #rc-cs-pic {
 	margin: auto;
+  padding-bottom: 40px;
 }
+
+#schwab-header {
+  color: #28466f;
+}
+#r-schwab-login {
+  text-align: center;
+  max-width: 400px;
+}
+/* CONTACT */
+
+#contact-header {
+  text-align: left;
+  padding-top:15px;
+  padding-bottom:20px;
+}
+
+#contact-block {
+  text-align: left;
+  max-width: 1100px;
+  font-size: 20pt;
+  word-wrap:break-word;
+}
+
+
+
+#contact-location {
+  text-align:center;
+  font-size:20pt;
+}
+
+#map {
+  width:auto;
+  height:400px;
+}
+
+#contact-email {
+  padding-top: 50px;
+  text-align: center;
+}
+
+#toggle-mobile {
+  text-align:center;
+  padding-left: 40px;
+  padding-top: 10px;
+  display: none;
+}
+
+#toggle-logo {
+  height:30px;
+  padding-right: 5px;
+}
+#success-header {
+  padding-top: 50px;
+  text-align: center;
+}
+
 /*@media(max-width: 1700px){
   .card-1{
     width: 90%  !important;

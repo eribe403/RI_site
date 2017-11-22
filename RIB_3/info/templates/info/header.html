@@ -22,6 +22,9 @@
 	<!-- Handles Active Navbar Tabs (Order Matters) -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="{% static 'info/js/Active.js' %}"></script>
+
+	<!--  Email reCAPTCHA  -->
+	<script src='https://www.google.com/recaptcha/api.js' async defer></script>
 	
 
 
@@ -38,7 +41,6 @@
 	        <h1 id='text-header'>RIBERA Investment Management LLC &#174;<small id='location-header'>Alameda, California</small></h1>
 	      </div>
 	    </div>
-
 	    <div class='row' id='nav-row'> 
 	      <div class='col-sm-12'>
 	  			<div class="masthead">
@@ -70,7 +72,10 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span> 
         </button> 
-     <!--    <img alt="Brand" src="{% static 'info/img/textcube.png' %}" style='height:70px;padding-bottom:5px;padding-top:10px;float: center;'> -->
+     		<div id='toggle-mobile'>
+     			<img id='toggle-logo' src="{% static 'info/img/textcube.png' %}">
+     			<a href="#">Back to top</a>
+     		</div>
 			</div>
       <div class="collapse navbar-collapse" id="myNavbar">
       	<div class='row'>
@@ -78,17 +83,17 @@
 		        <img id='logo-footer' alt="Brand" src="{% static 'info/img/textcube.png' %}">
 		  		</div>
 		  		<div class="col-sm-4">
-				  	<address>
+				  	<p id='address'>
 					    <strong>RIBERA Investment Management LLC &#174;</strong><br>
 					    883 Island Drive Suite 200<br>
 					    Alameda, CA  94502<br>
-					    <a href="#">Back to top</a>
-				    </address>
+					    <a id='header-btt-big' href="#">Back to top</a>
+						</p>
 		  		</div>
 				  <div id='icon-footer' class="col-sm-4">
 				  	<div id='icon-second-div'>
 					  	<a href='/contact/'><span id='glyph-email' class="fa fa-envelope"></span></a>
-					  	<a href="tel:+15555551212"><span id='glyph-phone' class="fa fa-phone"></span></a>
+					  	<a href="tel:+1-510-521-3172"><span id='glyph-phone' class="fa fa-phone"></span></a>
 					  	<a href='https://www.linkedin.com/in/tyler-ribera-31903537' target="_blank"><span id='glyph-linkedin' class="fa fa-linkedin"></span></a>
 					  </div>
 				  </div>
