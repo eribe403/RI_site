@@ -49,7 +49,6 @@ def contact(request):
       result = r.json()
       # print(result)
       ''' End reCAPTCHA validation '''
-
       if result['success']:
         full_name = form.cleaned_data['full_name']
         subject = form.cleaned_data['subject']
@@ -63,30 +62,11 @@ def contact(request):
         return redirect('success')
 
       else:
-        # messages.error(request, 'Invalid reCAPTCHA. Please try again.')
-        return HttpResponse('Do the captcha ffs')
-
+        messages.error(request, 'Invalid reCAPTCHA. Please try again.')
+        return render(request, "contact/contact.html", {'form': form})
   else:
     form = ContactForm()
     return render(request, "contact/contact.html", {'form': form})
-
-
-
-
-
-  #   form = ContactForm(request.POST)
-  #   if form.is_valid():
-  #     full_name = form.cleaned_data['full_name']
-  #     subject = form.cleaned_data['subject']
-  #     from_email = form.cleaned_data['from_email']
-  #     message = form.cleaned_data['message']
-  #     try:
-  #       final_form = "Full Name: " + full_name + "\n\n" + "From: " + from_email + "\n\n" + message
-  #       send_mail(subject, final_form, 'eribe403@gmail.com', ['eribe403@gmail.com'], fail_silently=False)
-  #     except BadHeaderError:
-  #       return HttpResponse('Invalid header found.')
-  #     return redirect('success')
-  # return render(request, "contact/contact.html", {'form': form})
 
 def success(request):
     return render(request, "contact/success.html")

@@ -3,6 +3,15 @@
 {% load staticfiles %}
 
 <br><br><br>
+<div class="container" style="text-align: center;">
+	{% if messages %}
+	<ul class="messages" style="list-style: none;font-size: 19pt;">
+	    {% for message in messages %}
+	    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+	    {% endfor %}
+	</ul>
+	{% endif %}
+</div>
 <hr class='featurette-divider'>
 <div id='contact-block' class="container">
   <h1 id='contact-header'>Contact</h1>
@@ -27,7 +36,8 @@
   var mapOptions = {
       center: new google.maps.LatLng(myLatLng),
       zoom: 14,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      // gestureHandling: 'greedy'
   }
 	var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 	var marker = new google.maps.Marker({
@@ -47,27 +57,25 @@
 <br><br><br>
 
 <h1 id='contact-email' style="">Contact Us</h1>
-<form class="form-group" action="?" method="POST">
+<form class="form-group" method="POST">
   {% csrf_token %}
   <div class="form-group" style="max-width: 500px;margin: auto;">
+
     <label class="control-label" for="full_name">Full Name:</label>
-    <input type="full_name" class="form-control" id="form-control" placeholder="Enter your name" name="full_name">
-  </div>
-  <br>
-  <div class="form-group" style="max-width: 500px;margin: auto;">
+    <input type="text" class="form-control" id="form-control" placeholder="Enter your name" name="full_name">
+    <br>
+
     <label class="control-label" for="from_email">Your Email:</label>
-			<input type="from_email" class="form-control" id="form-control" placeholder="Enter email address" name="from_email">
-  </div>
-  <br>
-  <div class="form-group" style="max-width: 500px;margin: auto;">
+		<input type="text" class="form-control" id="form-control" placeholder="Enter email address" name="from_email">
+    <br>
+
     <label class="control-label" for="subject">Subject:</label>
-    <input type="subject" class="form-control" id="form-control" placeholder="Subject" name="subject">
-  </div>
-  <br>
-  <div class="form-group" style="max-width: 500px;margin: auto;">
+    <input type="text" class="form-control" id="form-control" placeholder="Subject" name="subject">
+    <br>
+
     <label class="control-label" for="message">Email body:</label>
-    <textarea style="height: 200px;" type="message" class="form-control" id="form-control" placeholder="Email body" name="message"> </textarea>
-    </div>
+    <textarea style="height: 200px;" type="text" class="form-control" id="form-control" placeholder="Email body" name="message"> </textarea>
+
   </div>
   <br>
 	<script type="text/javascript"> 
@@ -83,5 +91,4 @@
     <button class="btn btn-default btn-md" type="submit">Send</button>
   </div>
 </form>
-
 {% endblock %}
